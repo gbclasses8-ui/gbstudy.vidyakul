@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-pink: #ec4899;
+    --brand-pink-glow: rgba(236, 72, 153, 0.4);
+    --brand-pink-dark: #be185d;
+    --brand-pink-light: #f472b6;
+    --bg-dark: #0a0b0e;
+    --card-dark: #12141a;
+    --card-border: #222634;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #08090d;
+    color: #f8fafc;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0f1117;
+}
+::-webkit-scrollbar-thumb {
+  background: #ec489955;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ec4899aa;
+}
+
+/* Pink Glow Effect Utility */
+.pink-glow {
+  box-shadow: 0 0 25px -4px rgba(236, 72, 153, 0.45);
+}
+.pink-glow-sm {
+  box-shadow: 0 0 15px -3px rgba(236, 72, 153, 0.35);
+}
+.pink-border-glow:hover {
+  border-color: rgba(236, 72, 153, 0.7);
+  box-shadow: 0 0 20px -5px rgba(236, 72, 153, 0.4);
+}
+
+/* Line clamp helpers */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
